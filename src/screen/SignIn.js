@@ -13,7 +13,7 @@ import {Text,
 
     
 } from "native-base"
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import propTypes from "prop-types"
 import {signIn} from "../actions/Auth"
 import {connect}from "react-redux"
@@ -91,7 +91,8 @@ logo:{
 },
 
 body:{
-    backgroundColor:"#EBFAFF"
+    backgroundColor:"#EBFAFF",
+    height:"100%",
 },
 container:{
     display:"flex",
@@ -121,16 +122,16 @@ icon:{
 heading:{
     fontWeight:"bold",
     color:"#EC2227",
-    fontSize: 30,
+    fontSize: hp('4%'),
     letterSpacing: 2
     
 },
 textContainer:{
-    marginLeft:25,
-    marginTop: 70
+    marginLeft:hp('5%'),
+    marginTop: hp('18%')
 },
 seconderyText:{
-    fontSize:16,
+    fontSize: hp('2.5%'),
     fontFamily:"Helvetica World",
     lineHeight: 21,
     letterSpacing: 1.5,
@@ -149,7 +150,7 @@ FieldContainer:{
 display:"flex",
 justifyContent:"center",
 alignItems:"center",
-marginTop:50
+marginTop:hp("5%")
 },
 signInButton:{
 
@@ -175,8 +176,11 @@ BoxRight:{
     width: 70,
     height: 60,
     backgroundColor:"#BF2726",
-    marginTop:84,
-    borderTopRightRadius:50
+    bottom:0,
+    borderTopRightRadius:50,
+    position:"absolute",
+    
+
     
 },
 iconRight:{

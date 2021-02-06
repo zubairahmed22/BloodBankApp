@@ -20,6 +20,7 @@ import propTypes from "prop-types"
 import EmptyContainer from "../Component/EmptyContainer"
 import { TouchableOpacity } from "react-native-gesture-handler";
 
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 const Home = ({getPosts,postState}) => {
@@ -134,7 +135,7 @@ logo:{
 },
 body:{
     backgroundColor:"#EBFAFF",
-    height:"100%"
+    height: "100%"
 },
 imageContainer:{
 display:"flex",
@@ -232,7 +233,7 @@ heading:{
 },
 textContainer:{
     marginLeft:25,
-    marginTop: 45
+    marginTop: hp('10%')
 },
 seconderyText:{
     fontSize:20,
@@ -268,18 +269,20 @@ display:"flex",
 flexDirection:"row",
 justifyContent:"flex-start",
 backgroundColor:"#EBFAFF",
-marginTop:326,
-position:"absolute"
+bottom:0,
+position:"absolute",
+height:"100%"
 
 },
 BoxRight:{
     width: 70,
     height: 60,
     backgroundColor:"#BF2726",
-    marginTop:170,
+    // marginTop: hp("30.1%"),
+
     borderTopRightRadius:50,
     position:"absolute",
-    
+    bottom:0
     
     
 },

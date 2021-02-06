@@ -13,7 +13,7 @@ import {connect}from "react-redux"
 import propTypes from 'prop-types'
 import {signOut} from "../actions/Auth"
 
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 
@@ -83,8 +83,8 @@ const Styles =  StyleSheet.create({
     },
 
     logo:{
-        width: "24%",
-        height:"50%",
+        width: hp("12.3%"),
+        height: hp("4.2%"),
         marginLeft:15,
         marginTop:13
     },
@@ -123,7 +123,7 @@ const Styles =  StyleSheet.create({
         borderWidth:1,
         borderColor:"#BF2726",
         backgroundColor:"#BF2726",
-        marginLeft:125,
+        marginLeft:hp("17.5%"),
         marginTop:12
 
        
@@ -139,7 +139,7 @@ const Styles =  StyleSheet.create({
     },
     LogOutButton:{
         position:"absolute",
-       marginLeft:230,
+       marginLeft:hp("32.5%"),
        width:50,
        height: 34,
        borderWidth:2,

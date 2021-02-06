@@ -16,7 +16,7 @@ import {Text,
 import propTypes from "prop-types"
 import {signUp} from "../actions/Auth"
 import {connect}from "react-redux"
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const SignUp = ({signUp}) => {
 
@@ -38,13 +38,14 @@ const SignUp = ({signUp}) => {
             <Image style={styles.icon} source={require("../assets/icon.png")}/>
         </View> */}
          <ScrollView>
-       <View style={styles.textContainer}>
-       <H1 style={styles.heading}>Sign Up</H1>
-       </View>
+       
       
-           
+         <View style={styles.textContainer}>
        <View style={styles.FieldContainer}>
+       
+       
       
+       <H1 style={styles.heading}>Sign Up</H1>
        <TextInput
        style={styles.inputFiled}
         placeholder="Email"
@@ -67,6 +68,7 @@ const SignUp = ({signUp}) => {
       
        
        </View>
+       </View>
        </ScrollView>
        <View style={styles.BoxRight}><Image style={styles.iconRight}
         source={require("../assets/icon.png")}/></View>
@@ -79,10 +81,10 @@ const SignUp = ({signUp}) => {
 
 const styles = StyleSheet.create({
 logo:{
-    width: "40%",
-    height: 50,
-    marginLeft:25,
-    marginTop: 15
+    width:"1%",
+    height: '1%',
+    marginLeft:'2%',
+    marginTop: '2%'
 },
 container:{
     display:"flex",
@@ -93,12 +95,13 @@ container:{
     
 },
 body:{
-    backgroundColor:"#EBFAFF"
+    backgroundColor:"#EBFAFF",
+    height: '100%'
 },
 
 Box:{
-    width: 80,
-    height: 80,
+    width: hp('80'),
+    height:hp('80'),
     backgroundColor:"#BF2726",
     borderBottomStartRadius: 50
 },
@@ -116,16 +119,18 @@ icon:{
 heading:{
     fontWeight:"bold",
     color:"#EC2227",
-    fontSize: 30,
+    fontSize: hp("4.4%"),
     letterSpacing: 2,
-    // marginLeft:85,
-    marginTop:20,
-    position:"absolute"
+    marginBottom: hp("5%"),
+    
+    
     
 },
 textContainer:{
-    marginTop:105,
-    alignItems:"center"
+    marginTop:hp("8%"),
+    alignItems:"center",
+    paddingBottom:hp("10%")
+    
    
 },
 
@@ -142,7 +147,7 @@ FieldContainer:{
 display:"flex",
 justifyContent:"center",
 alignItems:"center",
-marginTop:70
+marginTop:hp("15%")
 },
 signInButton:{
 
@@ -168,7 +173,7 @@ BoxRight:{
     width: 70,
     height: 60,
      backgroundColor:"#BF2726",
-    marginTop:132,
+    bottom:0,
     borderTopRightRadius:50
     
 },

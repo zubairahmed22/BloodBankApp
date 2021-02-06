@@ -19,7 +19,7 @@ import database from "@react-native-firebase/database"
 import {connect} from "react-redux"
 import propTypes from "prop-types"
 import shortId from "shortid"
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const Donation = ({userState,navigation}) =>{
 
     
@@ -236,11 +236,12 @@ inputFiled:{
 },
 FieldContainer:{
 display:"flex",
+marginTop: hp("12%"),
 
 
 justifyContent:"center",
 alignItems:"center",
-marginTop:20,
+
 
 },
 signInButton:{
@@ -268,15 +269,16 @@ footerContainer:{
 display:"flex",
 flexDirection:"row",
 justifyContent:"flex-start",
-marginTop: 460,
+bottom:0,
 backgroundColor:"#EBFAFF",
-position:"absolute"
+position:"absolute",
+height:"100%",
 },
 BoxRight:{
     width: 70,
     height: 60,
     backgroundColor:"#BF2726",
-    marginTop:39,
+    bottom:0,
     borderTopRightRadius:50,
     position:"absolute",
   
