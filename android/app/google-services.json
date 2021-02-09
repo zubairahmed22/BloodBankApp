@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "380746519195-jt0mo5s53tv3vmt066l3oseljndh4rrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bloodbankapp",
+            "certificate_hash": "9896eb3d6f413e1635075f9ae325e35209ee0cc5"
+          }
+        },
+        {
           "client_id": "380746519195-ii4q1i5nt7gc7rooo817ef79j2opg68g.apps.googleusercontent.com",
           "client_type": 3
         }

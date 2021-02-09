@@ -9,26 +9,27 @@ export const signUp = (data) => async (dispatch) =>{
 console.log(data)
 const {email,password} = data
 auth().createUserWithEmailAndPassword(email,password)
-.then(()=>{
+.then((data)=>{
     console.log(data)
     console.log("User creation was success")
 
     database()
-    .ref('/users'+ data.user.uid)
+    .ref('/users/'+ data.user.uid)
     .set({
         email,
-        password,
         uid: data.user.uid
     })
-    .then(()=>console.log("Data set Success"))
+    .then(()=>{
+        Snackbar.show({
+            text:"account created",
+            color:"white",
+            backgroundColor:"#BF2726"
+    
+    })
+    })
 
    
-    Snackbar.show({
-        text:"account created",
-        color:"white",
-        backgroundColor:"#BF2726"
-
-})
+  
 })
 .catch((error) => {
     console.log(error)
